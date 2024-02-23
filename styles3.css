@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.ibb.co/QY5023f/3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0; /* Reset margin */
+    padding: 0;
+    text-align: center;
+    position: relative; /* Add position relative */
+    top: 23px; /* Adjust the value as needed to move navs up */
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 90px;
+}
+
+nav ul li.watching a {
+    background-color: rgb(94,84,115) /* Your desired color */;
+    border-color: rgb(94,84,115) /* Your desired color */;
+}
+
+nav ul li.watching a:hover {
+    background-color: rgb(41, 44, 88)/* Your desired hover color */;
+    border-color: rgb(41, 44, 88)/* Your desired hover color */;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgb(255, 105, 51);
+    border: 2px;
+    border-radius: 20px;
+    transition: 1s;
+    font-family:'Barlow-Medium','Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color:rgb(250, 84, 23);
+    border-color: rgb(250, 84, 23);
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+    
+    .logo {
+        top: 10px;
+        left: 10px;
+    }
+    
+    nav ul {
+        position: static;
+        width: auto;
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px auto;
+    }
+}

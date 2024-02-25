@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +10,12 @@ html, body {
     font-family: Arial, sans-serif;
     background-image: url('https://i.ibb.co/QKHyjWW/4.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 
 header {
     text-align: center;
-    padding: 10px 0;
+    padding: 5% 0;
     position: relative;
 }
 
@@ -29,32 +28,34 @@ header {
 .logo img {
     width: 145px;
     height: auto;
-    border: 3px solid #fff;
     border-radius: 50%;
+    border: 3px solid #fff;
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0; /* Reset margin */
+    margin: 0;
     padding: 0;
     text-align: center;
-    position: relative; /* Add position relative */
-    top: 23px; /* Adjust the value as needed to move navs up */
+    position: absolute;
+    top: 0; /* Position the navigation container at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
 }
 
 nav ul li {
     display: inline-block;
-    margin-right: 90px;
+    margin-right: 30px; /* Adjust spacing between links */
 }
 
 nav ul li.conversation a {
-    background-color: rgb(94,84,115) /* Your desired color */;
-    border-color: rgb(94,84,115) /* Your desired color */;
+    background-color: rgb(94,84,115); /* Your desired color */
+    border-color: rgb(94,84,115); /* Your desired color */
 }
 
 nav ul li.conversation a:hover {
-    background-color: rgb(41, 44, 88)/* Your desired hover color */;
-    border-color: rgb(41, 44, 88)/* Your desired hover color */;
+    background-color: rgb(41, 44, 88); /* Your desired hover color */
+    border-color: rgb(41, 44, 88); /* Your desired hover color */
 }
 
 nav ul li a {
@@ -75,11 +76,10 @@ nav ul li a:hover {
     border-color: rgb(250, 84, 23);
 }
 
-
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 768px) {
     header {
-        padding: 20px 0;
+        padding: 10% 0;
     }
     
     .logo {
@@ -87,15 +87,33 @@ nav ul li a:hover {
         left: 10px;
     }
     
-    nav ul {
-        position: static;
-        width: auto;
-        padding: 0;
-        margin-top: 20px;
+    .logo img{
+        width: 80px;
     }
-    
+
+    nav ul {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     nav ul li {
         display: block;
-        margin: 10px auto;
+        margin: 30px auto;
+    }
+
+    /* Override background image for mobile */
+    html, body {
+        background-image: url('https://i.ibb.co/jfDJJW7/4.png');
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+/* Adjust position of links for screens wider than 768px */
+@media screen and (min-width: 769px) {
+    nav ul {
+        top: 30px; /* Move the navigation container down from the top */
     }
 }

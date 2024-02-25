@@ -34,7 +34,7 @@ header {
 
 nav ul {
     list-style-type: none;
-    margin: 10;
+    margin: 0;
     padding: 0;
     text-align: center;
 }
@@ -46,13 +46,13 @@ nav ul li {
 }
 
 nav ul li.home a {
-    background-color: rgb(94,84,115) /* Your desired color */;
-    border-color: rgb(94,84,115) /* Your desired color */;
+    background-color: rgb(94,84,115); /* Your desired color */
+    border-color: rgb(94,84,115); /* Your desired color */
 }
 
 nav ul li.home a:hover {
-    background-color: rgb(41, 44, 88)/* Your desired hover color */;
-    border-color: rgb(41, 44, 88)/* Your desired hover color */;
+    background-color: rgb(41, 44, 88); /* Your desired hover color */
+    border-color: rgb(41, 44, 88); /* Your desired hover color */
 }
 
 nav ul li a {
@@ -84,12 +84,25 @@ nav ul li a:hover {
         left: 10px;
     }
     
-    nav ul {
-        top: 70%;
+    .logo img{
+        width: 80px;
     }
-    
+
+    nav ul {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     nav ul li {
         display: block;
-        margin: 10px auto;
+        margin: 30px auto;
+    }
+
+    /* Override background image for mobile */
+    html, body {
+        background-image: url('https://i.ibb.co/w6KD018/1.png');
+        background-size: cover;
     }
 }

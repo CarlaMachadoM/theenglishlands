@@ -1,0 +1,134 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.ibb.co/QY5023f/3.png');
+    background-size: cover;
+    color: #fff;
+    background-repeat: repeat;
+}
+
+header {
+    text-align: center;
+    padding: 5% 0;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 0; /* Position the navigation container at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px; /* Adjust spacing between links */
+    margin-top: 20px
+}
+
+nav ul li.watching a {
+    background-color: rgb(94,84,115); /* Your desired color */
+    border-color: rgb(94,84,115); /* Your desired color */
+}
+
+nav ul li.watching a:hover {
+    background-color: rgb(41, 44, 88); /* Your desired hover color */
+    border-color: rgb(41, 44, 88); /* Your desired hover color */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgb(255, 105, 51);
+    border: 2px;
+    border-radius: 20px;
+    transition: 1s;
+    font-family:'Barlow-Medium','Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color:rgb(250, 84, 23);
+    border-color: rgb(250, 84, 23);
+}
+
+.video {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 190px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10% 0;
+    }
+    
+    .logo {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .logo img {
+        width: 80px;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px auto;
+    }
+
+    /* Override background image for mobile */
+    html, body {
+        background-image: url('https://i.ibb.co/nfqcpBw/3.png');
+        background-size: contain;
+        background-position: center;
+    }
+
+    .video {
+        width: 90%; /* Adjust video width */
+        height: 300px;
+        border-radius: 10px;
+        margin-top: 350px;
+        margin-left: 20px;
+    }
+}

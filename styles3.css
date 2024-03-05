@@ -11,6 +11,7 @@ html, body {
     background-image: url('https://i.ibb.co/QY5023f/3.png');
     background-size: cover;
     color: #fff;
+    background-repeat: repeat;
 }
 
 header {
@@ -76,6 +77,18 @@ nav ul li a:hover {
     border-color: rgb(250, 84, 23);
 }
 
+.video {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 190px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 768px) {
     header {
@@ -108,6 +121,18 @@ nav ul li a:hover {
         background-image: url('https://i.ibb.co/nfqcpBw/3.png');
         background-size: contain;
         background-position: center;
+    }
+
+    .video {
+        width: 40px;
+        height: 30px;
+        display: block;
+        margin: 0 auto;
+        display: inline-block;
+        margin-top: 30px;
+        margin-left: 90px;
+        margin-bottom: 20px;
+        border-radius: 10px;
     }
 }
 
